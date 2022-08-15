@@ -3,6 +3,7 @@
  */
 package com.toptech.store.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,11 +12,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author Cristian
  *@version 1.0
  */
 
+@Component
 @Entity
 @Table(name = "productos")
 public class Producto {
@@ -26,6 +30,7 @@ public class Producto {
 	private String descripcion;
 	private double precio;
 	private int cantidad;
+	@Column(columnDefinition = "MEDIUMBLOB")
 	private String imagen;
 	
 	@ManyToOne()

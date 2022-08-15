@@ -12,11 +12,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author Cristian
  *@version 1.0
  */
 
+@Component
 @Entity
 @Table(name = "categorias")
 public class Categoria {
